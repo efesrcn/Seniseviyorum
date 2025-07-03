@@ -1,28 +1,58 @@
+Süper fikir kanka! Sayfaya romantik bir giriş efekti ekliyorum: kalp ve yazı yavaşça ekrana süzülecek.
 
+İşte efektli, kalpli ve romantik kod:
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ask Sitesi</title>
+  <title>Kalbim Senin İçin</title>
   <style>
     body {
+      margin: 0;
+      height: 100vh;
+      background-color: #fff0f5;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #fff;
-      font-family: Arial, sans-serif;
       flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
     }
     .heart {
-      font-size: 300px;
+      font-size: 200px;
       color: red;
-      margin-top: 20px;
+      animation: pulse 1s infinite, fadeInUp 2s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Günaydın Hayatım Seni Çok Seviyorum!</h1>
+  <h1>Bu kalp senin için</h1>
   <div class="heart">❤️</div>
 </body>
 </html>
