@@ -1,48 +1,28 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Seni Seviyorum</title>
+  <title>Ask Sitesi</title>
   <style>
     body {
-      background-color: #000;
-      color: white;
-      text-align: center;
-      font-family: sans-serif;
-      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+      flex-direction: column;
     }
     .heart {
-      width: 100px;
-      height: 90px;
-      background-color: red;
-      position: relative;
-      margin: 0 auto;
-      transform: rotate(-45deg);
-      animation: pulse 1s infinite;
-    }
-    .heart:before,
-    .heart:after {
-      content: "";
-      width: 100px;
-      height: 90px;
-      background-color: red;
-      border-radius: 50%;
-      position: absolute;
-    }
-    .heart:before {
-      top: -50px;
-      left: 0;
-    }
-    .heart:after {
-      left: 50px;
-      top: 0;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1) rotate(-45deg); }
-      50% { transform: scale(1.1) rotate(-45deg); }
-      100% { transform: scale(1) rotate(-45deg); }
+      font-size: 100px;
+      color: red;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>Sana kalbimi bırakıyorum ❤️</h1>
-  <div class="heart"></div>
+  <h1>Merhaba, bu site sana özel!</h1>
+  <div class="heart">❤️</div>
+</body>
+</html>
