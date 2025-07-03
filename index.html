@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seni Seviyorum</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+      margin-top: 100px;
+    }
+    .heart {
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      position: relative;
+      margin: 0 auto;
+      transform: rotate(-45deg);
+      animation: pulse 1s infinite;
+    }
+    .heart:before,
+    .heart:after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .heart:before {
+      top: -50px;
+      left: 0;
+    }
+    .heart:after {
+      left: 50px;
+      top: 0;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1) rotate(-45deg); }
+      50% { transform: scale(1.1) rotate(-45deg); }
+      100% { transform: scale(1) rotate(-45deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Sana kalbimi bırakıyorum ❤️</h1>
+  <div class="heart"></div>
